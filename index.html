@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Color Scheme Generator by Diana Le</title>
+   <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+   <main>
+      <div class="generator">
+         <div class="generator__header">
+            <div class="generator__input">
+               <label></label>
+               <input type="color" class="generator__colorpicker">
+            </div>
+            <div class="generator__select">
+               <select class="generator__mode select-css">
+                  <option value="monochrome">Monochrome</option>
+                  <option value="monochrome-dark">Monochrome Dark</option>
+                  <option value="monochrome-light">Monochrome Light</option>
+                  <option value="analogic">Analogic</option>
+                  <option value="complement">Complement</option>
+                  <option value="analogic-complement">Analogic Complement</option>
+                  <option value="triad">Triad</option>
+                  <option value="quad">Quad</option>
+               </select>
+            </div>
+            <button class="generator__button">Get color scheme</button>
+
+         </div>
+         <div class="generator__palette">
+            <div class="generator__colorblock">
+               <div class="generator__color"></div>
+               <div class="generator__colorcode"></div>
+            </div>
+            <div class="generator__colorblock">
+               <div class="generator__color"></div>
+               <div class="generator__colorcode"></div>
+            </div>
+            <div class="generator__colorblock">
+               <div class="generator__color"></div>
+               <div class="generator__colorcode"></div>
+            </div>
+            <div class="generator__colorblock">
+               <div class="generator__color"></div>
+               <div class="generator__colorcode"></div>
+            </div>
+            <div class="generator__colorblock">
+               <div class="generator__color"></div>
+               <div class="generator__colorcode"></div>
+            </div>
+         </div>
+      </div>
+   </main>
+   <script src="./index.js"></script>
+</body>
+
+</html>
