@@ -6,6 +6,9 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Color Scheme Generator by Diana Le</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -14,11 +17,12 @@
       <div class="generator">
          <div class="generator__header">
             <div class="generator__input">
-               <label></label>
-               <input type="color" class="generator__colorpicker">
+               <label for="generator__colorpicker1">Color Picker</label>
+               <input type="color" class="generator__colorpicker" id="generator__colorpicker1">
             </div>
             <div class="generator__select">
-               <select class="generator__mode select-css">
+               <label for="generator__select1">Color Mode</label>
+               <select class="generator__mode select-css" id="generator__select1">
                   <option value="monochrome">Monochrome</option>
                   <option value="monochrome-dark">Monochrome Dark</option>
                   <option value="monochrome-light">Monochrome Light</option>
