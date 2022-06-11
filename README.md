@@ -2,7 +2,7 @@
 
 Select a color via the input and request different color modes using The Color API.
 
-[View Online](https://pursuitofleisure.github.io/color-scheme-generator/)
+[View Online](https://pursuitofleisure.github.io/color-palette-generator/)
 
 ## Built With
 * HTML
