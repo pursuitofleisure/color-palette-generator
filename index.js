@@ -22,7 +22,7 @@ function renderColors() {
       html += `
          <div class="generator__colorblock" data-color="${color}">
             <div class="generator__color" style="background-color: ${color};"></div>
-            <div class="generator__colorcode"><button class="generator__copy">Copy ${color}</button>${color}</div>
+            <div class="generator__colorcode"><button class="generator__copy">^ Copy</button>${color}</div>
          </div>
       `;
    });
@@ -72,7 +72,6 @@ function getRandomScheme() {
 // Copy color to clipboard
 function copy(e) {
    const copyText = e.currentTarget.dataset.color;
-   //console.log(copyText);
      
    // if browser does not support the navigator.clipboard API, use the deprecated execCommand
    if (!navigator.clipboard) {
@@ -82,14 +81,14 @@ function copy(e) {
 
       console.log(copyText);
 
-         // Display copied password to user in alert for 2 seconds
-         // const copiedPassword = document.getElementById('copied-password');
-         // copiedPassword.textContent = copyText;
-         // const status = document.querySelector('.status');
-         // status.classList.add('active');
-         // setTimeout(() => {
-         //    status.classList.remove('active');
-         //  }, 2000);
+         // Display copied color to user in alert for 2 seconds
+         const status = document.getElementById('status');
+         status.style.borderColor = copyText;
+         status.innerHTML = `Copied<br>${copyText}`;
+         status.classList.add('active');
+         setTimeout(() => {
+            status.classList.remove('active');
+          }, 2000);
           
       })
       .catch (function() {
