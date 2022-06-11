@@ -12,6 +12,7 @@
    --color-font-color: #2B283A;
    --color-icon-select: #9CA3AF;
    --color-bg-copy-button: #1F2937;
+   --color-bg-scheme-button-hover: #1F2937;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
    font-family: 'Inter', sans-serif;
    font-size: 0.75rem;
    font-weight: 400;
+   position: relative;
 }
 
 button {
@@ -69,6 +71,12 @@ label {
    width: 100%;
 }
 
+.generator__button:hover,
+.generator__button:focus {
+   background-color: var(--color-bg-scheme-button-hover);
+   color: #fff;
+}
+
 .generator__colorblock {
    display: grid;
    grid-template-rows: 2fr 1fr;
@@ -107,6 +115,51 @@ label {
    text-transform: uppercase;
    opacity: 0;
    transition: 0.4s opacity;
+}
+
+
+#status {
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+   background-color: var(--color-bg-copy-button);
+   color: var(--color-bg);
+   padding: 1rem 2rem;
+   border-radius: 6px;
+   text-align: center;
+   transition: opacity 0.4s ease-in-out;
+   font-size: 12px;
+   font-weight: 500;
+   border: 3px solid transparent;
+}
+
+#status.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+#credits {
+   color: #fff;
+   font-size: 0.875rem;
+   text-align: center;
+   margin-top: 32px;
+}
+
+#credits a {
+   color: #ACEF21;
+}
+
+#credits a:hover,
+#credits a:focus {
+   color: #6F9E0D;
+}
+
+#credits a:visited {
+   color: #E94EFA;
 }
 
 /* Select CSS code */
